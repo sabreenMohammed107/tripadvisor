@@ -26,7 +26,7 @@ class Hotel extends Model
     ];
 
     public function review(){
-        return $this->hasMany(Trip_review::class,'trip_id','id');
+        return $this->hasMany(Hotel_review::class);
       }
     public function avgRating()
     {

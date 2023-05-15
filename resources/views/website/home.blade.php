@@ -7,13 +7,13 @@
             <h1 class="mb-4 pb-0"><span>{{ $company->title }}</span> </h1>
             <p class="mb-4 pb-0">T{{ $company->subtitle }}</p>
             <a href="https://youtu.be/F1os31eQABg" class="glightbox play-btn mb-4"></a>
-            <a href="#about" class="about-btn scrollto">About Tripadvisor</a>
+            <a href="{{ url('/') }}#about" class="about-btn scrollto">About Tripadvisor</a>
             <!--search-->
-
+            <form action="{{ route('search') }}" method="GET">
             <div class="wrapper">
                 <div class="search-input">
-                    <a href="" target="_blank" hidden></a>
-                    <input type="text" placeholder="Type to search.."><a href="search-result.html">
+                    <input type="text" name="search" placeholder="Search by hotel name..">
+
                         <input type="submit" name="" value="search">
 
                         <div class="autocom-box">
@@ -22,7 +22,7 @@
                         <div class="icon"><i class="fas fa-search"></i></div>
                 </div>
             </div>
-            </a>
+            </form>
         </div>
 
 
@@ -344,7 +344,7 @@
             <img src="{{ asset('uploads/hotels') }}/{{ $hotel->banner }}"
                 alt="Hotel 1" class="img-fluid">
         </div>
-        <h3><a href="#">{{ $hotel->title }}</a></h3>
+        <h3><a href="{{ url('/single-hotel/'.$hotel->id) }}">{{ $hotel->title }}</a></h3>
         <p>{{ $hotel->cost }}$</p>
 
         <div class="stars">
@@ -601,17 +601,27 @@
 
         <!-- ======= Subscribe Section ======= -->
         <section id="subscribe">
-            <div class="container" data-aos="zoom-in">
+            <div class="container" >
                 <div class="section-header">
                     <h2>KEEP IN TOUCH</h2>
                     <p>ITS TIME FOR <span>ADVENTURES</span> & EXPERIENCES.</p>
+                    @if(Session::has('flash_success'))
+
+                    <div class="alert alert-success alert-dismissible fade show" role="alert"
+
+                    <strong ><i class="fa fa-check-circle"></i> {{session('message')}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+
+                @endif
                 </div>
 
-                <form method="POST" action="#">
+                <form action="{{url('/sendNewsLetter')}}" method="POST">
+                    @csrf
                     <div class="row justify-content-center">
                         <div class="col-lg-6 col-md-10 d-flex">
-                            <input type="email" class="form-control" placeholder="Enter your Email">
-                            <button type="submit" class="ms-2">Subscribe</button>
+                            <input type="email" name="email" class="form-control" style="z-index: 999" placeholder="Enter your Email">
+                            <button type="submit" style="z-index: 999" class="ms-2">Subscribe</button>
                             <label for="email"></label>
                         </div>
                     </div>
@@ -724,10 +734,22 @@
                     </div>
 
                 </div>
+                @if(Session::has('flash_success'))
 
+                <div class="alert alert-success alert-dismissible fade show" role="alert"
+
+                <strong ><i class="fa fa-check-circle"></i> {{session('flash_success')}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+            @endif
                 <div class="form">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
+
+
+                    <form action="{{ route('contact.store') }}" method="post" role="form" class="">
+
+                            @csrf
+                              <div class="row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="name" class="form-control" id="name"
                                     placeholder="Your Name" required>
@@ -748,12 +770,12 @@
                         <div class="form-group mt-3">
                             <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                         </div>
-                        <div class="my-3">
+                        {{-- <div class="my-3">
                             <div class="loading">Loading</div>
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
+                        </div> --}}
+                        <div class="text-center mt-2"><button class="bsubmit" type="submit">Send Message</button></div>
                     </form>
                 </div>
 

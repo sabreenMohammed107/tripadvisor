@@ -63,6 +63,20 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .bsubmit {
+    background: #14db91f7;
+    border: 0;
+    padding: 10px 40px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.bsubmit:hover {
+    background: #e0072f;
+}
+    </style>
 </head>
 
 <body>
@@ -105,10 +119,28 @@
           </ul>
         </li> -->
                     <li><a class="nav-link scrollto" href="{{ url('/') }}#contact">Contact Us</a></li>
+                    @if (Auth::user() && Auth::user()->type == 'user')
+                    <li><a class="nav-link scrollto" href="{{ url('/') }}">welcome {{ Auth::user()->name ?? ''}}</a></li>
+                    @endif
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-            <a class="sign-in scrollto" href="#sign-in">Sign In/Sign Up</a>
+            @if (Auth::user() && Auth::user()->type == 'user')
+
+            <a href="" class="sign-in scrollto" href="{{ route('user-logout') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();" >Logout</a>
+  <form id="logout-form" action="{{ route('user-logout') }}" method="POST"
+  style="display: none;">
+  @csrf
+</form>
+        @else
+            <li class="nav-item">
+
+                <a href="{{ url('/user-login') }}" class="sign-in scrollto">Sign In</a>
+
+            </li>
+        @endif
+            {{-- <a class="sign-in scrollto" href="#sign-in">Sign In/Sign Up</a> --}}
 
         </div>
     </header><!-- End Header -->
