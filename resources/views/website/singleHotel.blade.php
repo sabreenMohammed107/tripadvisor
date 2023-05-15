@@ -25,7 +25,7 @@
     color: #FFF;
 }
 </style>
-<section id="spaekers-details pt-5" style="margin-top: 200px;margin-bottom: 200px">
+<section id="spaekers-details pt-5" style="margin-top: 200px;margin-bottom: 50px">
     <div class="container">
       <div class="section-header">
         <h2>Hotel Details</h2>
@@ -83,7 +83,7 @@
   </section>
 </section>
 <!-- rooms section -->
-<section class="reviews container">
+<section class="reviews container" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
     <div class="review_heading">
         <h5> hotel review</h5>
         <!-- modal -->
@@ -135,7 +135,7 @@
 
 
     @foreach ($reviews as $rev)
-        <div class="review_details">
+        <div class="review_details" style="">
             <img width="100" src="{{ asset('website_assets/assets/img/logo.png') }}" alt="profile picture ">
 
             <div class="review_info">
