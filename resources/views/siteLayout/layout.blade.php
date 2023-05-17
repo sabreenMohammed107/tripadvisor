@@ -94,7 +94,7 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="nav-link scrollto " href="{{ url('/') }}#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url('/') }}#venue">Trips</a></li>
+                    {{-- <li><a class="nav-link scrollto" href="{{ url('/') }}#venue">Trips</a></li> --}}
                     <li><a class="nav-link scrollto" href="{{ url('/') }}#hotels">Hotels</a></li>
                     {{-- <li><a class="nav-link scrollto" href="#amenities">Amenities</a></li> --}}
                     <li><a class="nav-link scrollto" href="{{ url('/') }}#about">About Us</a></li>
@@ -162,7 +162,7 @@
                         <h4>Useful Links</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="{{ url('/') }}#hero">Home</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="{{ url('/') }}#venue">Trips</a></li>
+                            {{-- <li><i class="bi bi-chevron-right"></i> <a href="{{ url('/') }}#venue">Trips</a></li> --}}
                             <li><i class="bi bi-chevron-right"></i> <a href="{{ url('/') }}#hotels">Hotels</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="{{ url('/') }}#testimonials">Testmonials</a></li>
                         </ul>

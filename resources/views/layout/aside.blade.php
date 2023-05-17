@@ -143,7 +143,7 @@
 
 
                 <!-- start Event -->
-                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <span class="menu-link">
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
@@ -174,7 +174,7 @@
 
 
                     </div>
-                </div>
+                </div> --}}
                 <!-- end Event -->
 
                 <!-- start Event -->
