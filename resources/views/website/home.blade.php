@@ -28,7 +28,7 @@
 
     </section><!-- End Hero Section -->
 
-    <div class="tm-section tm-bg-img" id="tm-section-1">
+    {{-- <div class="tm-section tm-bg-img" id="tm-section-1">
         <div class="tm-bg-white ie-container-width-fix-2">
             <div class="container ie-h-align-center-fix">
                 <div class="row">
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- ======= Speakers Section ======= -->
     <section id="speakers">
         <div class="container">
