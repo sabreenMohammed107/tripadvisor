@@ -133,8 +133,8 @@
         </div>
     </div> --}}
     <!-- ======= Speakers Section ======= -->
-    {{-- <section id="speakers">
-        <div class="container">
+    <section id="speakers">
+        {{-- <div class="container">
             <div class="section-header">
                 <h2>popular trips</h2>
                 <p>WE GIVE YOU GUIDENCE</p>
@@ -175,7 +175,7 @@
 
             </div>
         </div>
-
+ --}}
 
 
 
@@ -215,7 +215,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
 
     <!-- End Speakers Section -->
