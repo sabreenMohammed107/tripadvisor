@@ -46,7 +46,9 @@ class ContentController extends Controller
             // \Mail::to($emails)->send(new NewsLetterNotification($letter));
 
 
-             return redirect()->back()->with('message','thanks for your subscription');
+            //  return redirect()->back()->with('message','thanks for your subscription');
+             return redirect()->back();
+
          }
             catch(QueryException $q){
 

@@ -231,7 +231,7 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <a class="menu-link" href="#">
+                    <a class="menu-link" href="{{ route('contact-msg.index') }}">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen009.svg-->
                             <span class="svg-icon svg-icon-2">
@@ -247,11 +247,11 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Test</span>
+                        <span class="menu-title">Contact Messages</span>
                     </a>
                 </div>
                 <div class="menu-item">
-                    <a class="menu-link" href="#">
+                    <a class="menu-link" href="{{ route('news-letter.index') }}">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
                             <span class="svg-icon svg-icon-2">
@@ -267,13 +267,12 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Test</span>
+                        <span class="menu-title">News Letter</span>
                     </a>
                 </div>
-                <div class="menu-item">
+                {{-- <div class="menu-item">
                     <a class="menu-link" href="#">
                         <span class="menu-icon">
-                            <!--begin::Svg Icon | path: icons/duotune/coding/cod003.svg-->
                             <span class="svg-icon svg-icon-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none">
@@ -289,7 +288,7 @@
                         </span>
                         <span class="menu-title">Test
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!--end::Menu-->

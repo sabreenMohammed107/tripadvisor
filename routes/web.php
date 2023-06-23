@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ContactMsgController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GuidenceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\TestimonialContoller;
 use App\Http\Controllers\TripsController;
 use App\Http\Controllers\website\ContentController;
@@ -79,6 +81,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
      Route::resource('faq', FaqController::class);
      Route::resource('galleries', GalleryController::class);
      Route::resource('hotels', HotelController::class);
+     Route::resource('contact-msg', ContactMsgController::class);
+     Route::resource('news-letter', NewsLetterController::class);
 
 });
 

@@ -41,7 +41,6 @@ class UsersController extends Controller
                 return redirect()->intended(url('/'));
 
             } else {
-dd('error');
                 return redirect()->route('user-login')
                     ->withErrors('invalid_data');
 
