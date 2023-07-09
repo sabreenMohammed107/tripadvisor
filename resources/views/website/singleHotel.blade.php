@@ -139,9 +139,9 @@
             <img width="100" src="{{ asset('website_assets/assets/img/logo.png') }}" alt="profile picture ">
 
             <div class="review_info">
-                <div class="heading">
+                <div class="heading" style=" display: flex; justify-content: space-between;">
 
-                    <div class="rating">
+                    <div class="rating" >
 
                         @for ($i = 0; $i < $rev->review_stars; $i++)
                         <i class="bi bi-star-fill"></i>
@@ -150,6 +150,17 @@
                         <i class="bi bi-star"></i>
                         @endfor
                     </div>
+                    <div style="background: #ddd;padding:10px ">
+                        @if ($rev->review_stars >=3)
+                        <p style="margin: 0"><img src="{{ asset('/img/like.png')}}" width="25"> Recomended</p>
+
+                           @else
+                           <p style="margin: 0"><img src="{{ asset('/img/dislike.png')}}" width="30"> Not Recomended</p>
+
+                        @endif
+
+                    </div>
+
                 </div>
                 <p>
                     {{ $rev->review_text }}
