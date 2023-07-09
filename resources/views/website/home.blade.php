@@ -7,7 +7,7 @@
             <h1 class="mb-4 pb-0"><span>{{ $company->title }}</span> </h1>
             <p class="mb-4 pb-0">{{ $company->subtitle }}</p>
             <a href="https://youtu.be/F1os31eQABg" class="glightbox play-btn mb-4"></a>
-            <a href="{{ url('/') }}#about" class="about-btn scrollto">About Tripadvisor</a>
+            <a href="{{ url('/') }}#about" class="about-btn scrollto">About true trip</a>
             <!--search-->
             <form action="{{ route('search') }}" method="GET">
             <div class="wrapper">
@@ -234,8 +234,8 @@
             <div class="container-fluid">
 
                 <div class="section-header">
-                    <h2>TripAdvisor</h2>
-                    <p>TripAdvisor location info and gallery</p>
+                    <h2>true trip</h2>
+                    <p>true trip location info and gallery</p>
                 </div>
 
                 <div class="row g-0">
@@ -248,7 +248,7 @@
                         <div class="row justify-content-center">
                             <div class="col-11 col-lg-8 position-relative">
                                 <h3>{{ $company->address }}</h3>
-                                <p>Find What You Need At Tripadvisor, The Biggest Travel Site In The World.</p>
+                                <p>Find What You Need At true trip, The Biggest Travel Site In The World.</p>
                             </div>
                         </div>
                     </div>

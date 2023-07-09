@@ -212,7 +212,7 @@
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
       -->
-                Designed by <a href="https://bootstrapmade.com/">Trip Advisor Team</a>
+                Designed by <a href="https://bootstrapmade.com/">true trip Team</a>
             </div>
         </div>
     </footer><!-- End  Footer -->
