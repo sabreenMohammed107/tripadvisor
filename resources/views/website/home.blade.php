@@ -5,7 +5,7 @@
     <section id="hero">
         <div class="hero-container" data-aos-delay="100">
             <h1 class="mb-4 pb-0"><span>{{ $company->title }}</span> </h1>
-            <p class="mb-4 pb-0">T{{ $company->subtitle }}</p>
+            <p class="mb-4 pb-0">{{ $company->subtitle }}</p>
             <a href="https://youtu.be/F1os31eQABg" class="glightbox play-btn mb-4"></a>
             <a href="{{ url('/') }}#about" class="about-btn scrollto">About Tripadvisor</a>
             <!--search-->
