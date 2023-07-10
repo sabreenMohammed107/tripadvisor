@@ -88,7 +88,7 @@
             <div id="logo" class="me-auto">
                 <!-- Uncomment below if you prefer to use a text logo -->
                 <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
-                <a href="index.html" class="scrollto"><img src="{{ asset('website_assets/assets/img/logo.png') }}" alt="" title=""></a>
+                <a href="index.html" class="scrollto"><img src="{{ asset('website_assets/assets/img/logo.jpeg') }}" alt="" title=""></a>
             </div>
 
             <nav id="navbar" class="navbar order-last order-lg-0">
@@ -154,7 +154,7 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-info">
-                        <img src="{{ asset('/website_assets/assets/img/logo.png')}}" alt="Trip Advisor">
+                        <img src="{{ asset('/website_assets/assets/img/logo.jpeg')}}" alt="Trip Advisor">
                         <p>{{ $company->overview }}</p>
                     </div>
 

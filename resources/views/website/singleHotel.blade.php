@@ -136,7 +136,7 @@
 
     @foreach ($reviews as $rev)
         <div class="review_details" style="">
-            <img width="100" src="{{ asset('website_assets/assets/img/logo.png') }}" alt="profile picture ">
+            <img width="100" src="{{ asset('website_assets/assets/img/logo.jpeg') }}" alt="profile picture ">
 
             <div class="review_info">
                 <div class="heading" style=" display: flex; justify-content: space-between;">
